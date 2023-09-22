@@ -36,24 +36,30 @@ class LoginScreen_Tile extends StatelessWidget {
           SizedBox(
             width: width * 0.03,
           ),
-          const Text(
-            '|',
-            style: TextStyle(fontSize: 33, color: grey),
+          Padding(
+            padding:  EdgeInsets.only(bottom: height*0.01),
+            child: const Text(
+              '|',
+              style: TextStyle(fontSize: 33, color: grey),
+            ),
           ),
           SizedBox(
             width: width * 0.02,
           ),
           Expanded(
-            child: TextField(
-              controller: phoneNumberController,
-              keyboardType: TextInputType.number,
-              onChanged: (value) {
-                phoneNumberControllerInstance.setPhoneNumber(value);
-              },
-              decoration: const InputDecoration(
-                border: InputBorder.none,
-                hintText: 'Phone Number',
-                hintStyle: TextStyle(color: grey, fontSize: 18),
+            child: Padding(
+              padding:  EdgeInsets.only(top: height*0.02),
+              child: TextField(
+                controller: phoneNumberController,
+                keyboardType: TextInputType.number,
+                onChanged: (value) {
+                  phoneNumberControllerInstance.setPhoneNumber(value);
+                },
+                decoration: const InputDecoration(
+                  border: InputBorder.none,
+                  hintText: 'Phone Number',
+                  hintStyle: TextStyle(color: grey, fontSize: 18),
+                ),
               ),
             ),
           ),
