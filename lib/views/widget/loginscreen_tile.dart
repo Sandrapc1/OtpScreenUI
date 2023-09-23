@@ -37,7 +37,7 @@ class LoginScreen_Tile extends StatelessWidget {
             width: width * 0.03,
           ),
           Padding(
-            padding:  EdgeInsets.only(bottom: height*0.01),
+            padding: EdgeInsets.only(bottom: height * 0.01),
             child: const Text(
               '|',
               style: TextStyle(fontSize: 33, color: grey),
@@ -48,7 +48,7 @@ class LoginScreen_Tile extends StatelessWidget {
           ),
           Expanded(
             child: Padding(
-              padding:  EdgeInsets.only(top: height*0.02),
+              padding: EdgeInsets.only(top: height * 0.02),
               child: TextField(
                 controller: phoneNumberController,
                 keyboardType: TextInputType.number,

@@ -1,14 +1,15 @@
 import 'package:get/get.dart';
+import '../views/otp_screen.dart';
 
 class PhoneNumberController extends GetxController {
-  var countryCode = '+91'.obs;
-  var phoneNumber = ''.obs;
+   RxString phoneNumber = ''.obs;
 
-  void setCountryCode(String value) {
-    countryCode.value = value;
+  void setPhoneNumber(String number) {
+    phoneNumber.value = number;
   }
 
-  void setPhoneNumber(String value) {
-    phoneNumber.value = value;
+  void navigateToOtpScreen() {
+    // Navigate to the OTP screen
+    Get.to( OtpScreen());
   }
 }
